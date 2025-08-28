@@ -1,36 +1,179 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 图像到图像 AI - 网站复刻
 
-## Getting Started
+这是对 [ImgToImg.ai](https://imgtoimg.ai/zh) 网站的完整复刻，使用现代的 Web 技术栈构建。
 
-First, run the development server:
+## 🌟 项目特点
 
+- ✨ **完整功能复刻** - 精确还原了原网站的所有UI组件和布局
+- 🌙 **深色主题设计** - 忠实复现了原网站的深色主题风格
+- 📱 **响应式设计** - 完美适配桌面端和移动端设备
+- ⚡ **现代技术栈** - 使用最新的 Web 开发技术
+- 🎨 **精美UI组件** - 基于Shadcn/ui的高质量组件库
+
+## 🛠️ 技术栈
+
+- **框架**: Next.js 15 (React 18)
+- **样式**: TailwindCSS + 自定义CSS
+- **UI组件**: Shadcn/ui
+- **图标**: Lucide React
+- **开发工具**: Bun + TypeScript + Biome
+- **部署**: Netlify
+
+## 📦 功能特性
+
+### 核心功能
+- 🖼️ **图片上传区域** - 支持拖拽上传，多种格式支持
+- 🎛️ **参数设置面板** - 提示词输入、长宽比选择、输出数量设置
+- 🎨 **示例图像展示** - 轮播展示AI变换效果
+- 🤖 **AI工具网格** - 展示相关AI工具和功能
+
+### 内容区域
+- 📖 **功能介绍** - "什么是图像到图像AI？"详细说明
+- 📋 **4步骤流程** - 清晰的操作指南
+- ⭐ **特色卖点** - 4个核心优势展示
+- ❓ **FAQ部分** - 常见问题解答
+- 🔗 **完整页脚** - 链接导航和信息
+
+### UI/UX特性
+- 🎭 **悬停效果** - 丰富的交互反馈
+- 🔄 **动画过渡** - 流畅的用户体验
+- 📐 **像素级还原** - 精确匹配原网站设计
+- 🌐 **多语言支持** - 完整的中文界面
+
+## 🚀 快速开始
+
+### 环境要求
+- Node.js 18+
+- Bun 1.0+
+
+### 安装和运行
+
+1. **克隆仓库**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+git clone https://github.com/LDGAGI/imgtoimg-ai-clone.git
+cd imgtoimg-ai-clone
+```
+
+2. **安装依赖**
+```bash
+bun install
+```
+
+3. **启动开发服务器**
+```bash
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. **构建生产版本**
+```bash
+bun run build
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 项目结构
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+imgtoimg-clone/
+├── src/
+│   ├── app/                 # Next.js App Router
+│   │   ├── globals.css     # 全局样式
+│   │   ├── layout.tsx      # 根布局
+│   │   └── page.tsx        # 主页面
+│   ├── components/
+│   │   └── ui/             # Shadcn UI组件
+│   └── lib/
+│       └── utils.ts        # 工具函数
+├── public/                 # 静态资源
+├── .same/                  # Same平台配置
+├── netlify.toml           # Netlify部署配置
+├── tailwind.config.ts     # TailwindCSS配置
+└── package.json           # 项目依赖
+```
 
-## Learn More
+## 🎨 设计系统
 
-To learn more about Next.js, take a look at the following resources:
+### 颜色主题
+- **主背景**: `#0c0b0c` (深黑色)
+- **卡片背景**: `rgba(255, 255, 255, 0.05)` (半透明白色)
+- **边框颜色**: `rgba(255, 255, 255, 0.1)` (淡灰色)
+- **文字颜色**: `#ffffff` (纯白色)
+- **次要文字**: `#9ca3af` (灰色)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 组件特色
+- **上传区域**: 虚线边框 + 悬停效果
+- **按钮组件**: 自定义样式 + 激活状态
+- **特色卡片**: 玻璃拟态效果 + 悬停动画
+- **手风琴FAQ**: 流畅展开收起动画
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📸 页面展示
 
-## Deploy on Vercel
+### 主要区域
+1. **导航栏** - Logo + 菜单按钮
+2. **英雄区域** - 主标题 + 功能介绍
+3. **上传区域** - 文件上传 + 参数设置
+4. **示例展示** - 图像轮播 + 变换效果
+5. **工具网格** - AI功能卡片
+6. **内容区域** - 介绍 + 流程 + 特色
+7. **FAQ区域** - 常见问题解答
+8. **页脚区域** - 链接 + 信息
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔧 开发说明
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 主要依赖
+```json
+{
+  "next": "15.3.2",
+  "react": "18.3.1",
+  "tailwindcss": "3.4.17",
+  "@radix-ui/react-accordion": "1.2.12",
+  "lucide-react": "0.542.0",
+  "class-variance-authority": "0.7.1"
+}
+```
+
+### 自定义组件
+- `Button` - 多种样式变体的按钮组件
+- `Card` - 卡片容器组件
+- `Input/Textarea` - 表单输入组件
+- `Accordion` - 可折叠内容组件
+- `Separator` - 分隔线组件
+
+## 🌐 部署
+
+项目已配置Netlify自动部署：
+
+1. **自动构建** - 推送到main分支触发构建
+2. **环境配置** - 预配置的netlify.toml
+3. **图像优化** - 支持外部图像资源
+4. **Next.js优化** - 生产环境优化配置
+
+## 📝 开发记录
+
+### 已完成功能
+- ✅ 深色主题设计
+- ✅ 响应式布局
+- ✅ 所有UI组件
+- ✅ 交互动效
+- ✅ 内容区域
+- ✅ FAQ功能
+- ✅ 页脚链接
+
+### 可扩展功能
+- 🔄 图片上传功能
+- 🎯 AI接口集成
+- 🌐 多语言支持
+- 📊 数据分析
+- 🔐 用户系统
+
+## 📄 许可证
+
+本项目仅用于学习和演示目的。
+
+## 🤝 贡献
+
+欢迎提交 Issue 和 Pull Request！
+
+---
+
+**🤖 使用 [Same](https://same.new) 构建**
+
+*这个项目展示了现代Web开发技术栈的强大能力，通过精确复刻展现了专业的前端开发水平。*
